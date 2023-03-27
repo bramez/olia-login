@@ -6,7 +6,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 class LoginPage:
     def __init__(self, driver):
         self.driver = driver
-        self.driver.get("http://127.0.0.1:5000")
+        self.driver.get("http://127.0.0.1:12345")
         self.wait_until_loaded()
 
     def wait_until_loaded(self):

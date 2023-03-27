@@ -9,9 +9,9 @@ Feature: Access management
     And I click on the login button
     Then I should be redirected to the profile page
 
-#  Scenario: Unsuccessful Login
-#    Given I am on the login page
-#    When I enter invalid credentials
-#    And I click on the login button
-#    Then I should see an error message
-#    And I should remain on the login page
+  Scenario: Unsuccessful Login with invalid user name
+    Given I am on the login page
+    When I enter invalid user name
+    And I click on the login button
+    Then I should see an error message
+    And I should see a link to go back to the login page
