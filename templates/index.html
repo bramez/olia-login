@@ -2,17 +2,18 @@
 <html>
 <head>
 	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="./static/style.css">
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
 </head>
 <body>
-	<form>
+    <form method="post" action="{{ url_for('login') }}">
+
 		<label for="username">Username:</label>
 		<input type="text" id="username" name="username"><br>
 
 		<label for="password">Password:</label>
 		<input type="password" id="password" name="password"><br>
 
-		<input type="submit" value="Submit">
+		<input type="submit" id="submit" value="Submit">
 	</form>
 </body>
 </html>
