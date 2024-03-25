@@ -9,6 +9,6 @@ class Calculator:
     def sum(self, a, b):
         if type(b) is not int:
             raise NotANumberException()
-        return a - b
+        return a + b
 
 
