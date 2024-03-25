@@ -14,3 +14,7 @@ def test_unsuccessful_sum():
     calculator = Calculator()
 
     assert_that(calling(calculator.sum).with_args(2, "patata"), raises(NotANumberException))
+
+
+def test_fail():
+    assert False
