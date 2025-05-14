@@ -15,3 +15,11 @@ Feature: Access management
     And I click on the login button
     Then I should see an error message
     And I should see a link to go back to the login page
+
+    Scenario: Unsuccessful Login with invalid password
+    Given I am on the login page
+    When I enter valid user name
+    And I enter invalid password
+    And I click on the login button
+    Then I should see an error message
+    And I should see a link to go back to the login page

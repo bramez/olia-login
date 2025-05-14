@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
 
@@ -11,7 +11,7 @@ class LoginPage:
 
     def wait_until_loaded(self):
         WebDriverWait(self.driver, timeout=10).until(
-            expected_conditions.visibility_of_element_located(self.get_input_username()))
+            EC.visibility_of_element_located(self.get_input_username()))
 
     def get_input_username(self):
         return By.ID, "username"

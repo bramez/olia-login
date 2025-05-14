@@ -4,7 +4,7 @@ from selenium import webdriver
 def before_all(context):
     print("before_all")
 
-    PATH = "/Users/abraham.iglesias/chromedriver"
+    PATH = "/Users/olia/work/webdrivers/chromedriver"
 
     # Configuración del driver de Chrome
     options = webdriver.ChromeOptions()

@@ -46,3 +46,15 @@ def step_impl(context):
 def step_impl(context):
     context.error_page = ErrorPage(context.driver)
     assert context.error_page.is_link_go_back_displayed(), "The element you are looking for is not displayed"
+
+
+@when("I enter valid user name")
+def step_impl(context):
+    context.login_page = LoginPage(context.driver)
+    context.login_page.write_username("olia")
+
+
+@step("I enter invalid password")
+def step_impl(context):
+    context.login_page = LoginPage(context.driver)
+    context.login_page.write_password("olia77")
